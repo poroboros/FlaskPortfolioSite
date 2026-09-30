@@ -1,0 +1,94 @@
+@import "core.css";
+
+
+@keyframes terminal-open {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+div#terminal {
+
+  .window-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    min-height: 58px;
+    padding: 0 22px 0 72px;
+    border: 1px solid var(--ink);
+    border-radius: 10px 10px 0 0;
+    background: var(--ink);
+    box-shadow: 0 12px 28px --dark-purple;
+  }
+
+  .window-line ::after {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 38px;
+    height: 10px;
+    background-image:
+      radial-gradient(circle, #ed786e 0 4px, transparent 4.5px),
+      radial-gradient(circle, #e6bd68 0 4px, transparent 4.5px),
+      radial-gradient(circle, #79b78e 0 4px, transparent 4.5px);
+    background-position: 0 0, 14px 0, 28px 0;
+    background-repeat: no-repeat;
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .prompt-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    min-height: 58px;
+    padding: 0 22px 0 72px;
+  }
+  
+
+
+  .prompt-line::before {
+    display: block;
+    color: var(--ink);
+    content: "neil@portfolio:~" attr(data-path) " $ ls";
+    font-size: 17px;
+    white-space: nowrap;
+  }
+
+  .prompt-line a {
+    color: var(--green);
+    font-size: 18px;
+
+    text-decoration: none;
+    text-underline-offset: 4px;
+  }
+
+  .prompt-line a:hover,
+  .prompt-line a:focus-visible {
+    color: --dark-green;
+    text-decoration: underline;
+  }
+
+  main {
+    position: relative;
+    min-height: 420px;
+    padding: 54px 58px 64px;
+    border: 1px solid var(--line);
+    border-top: 0;
+    border-radius: 0 0 10px 10px;
+    background: var(--paper);
+    box-shadow: 0 24px 60px rgba(64, 44, 91, 0.09);
+    animation: terminal-open 300ms ease-out both;
+  }
+
+}

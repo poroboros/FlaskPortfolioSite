@@ -1,0 +1,12 @@
+[project]
+name = "personal-site"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.3",
+    "frozen-flask>=1.0.2",
+    "markdown>=3.11",
+    "python-frontmatter>=1.3.0",
+    "ruff>=0.16.9",
+]
+

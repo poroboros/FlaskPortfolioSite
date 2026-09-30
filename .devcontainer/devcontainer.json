@@ -1,0 +1,58 @@
+{
+  "name": "personal-site",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [
+    5000
+  ],
+  "containerEnv": {
+    "UV_LINK_MODE": "copy",
+    "UV_PROJECT_ENVIRONMENT": "/home/vscode/.venv"
+  },
+  "postCreateCommand": "uv sync",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "samuelcolvin.jinjahtml"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/home/vscode/.venv/bin/python",
+        "[python]": {
+          "editor.formatOnSave": true,
+          "editor.formatOnSaveMode": "file",
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+          }
+        },
+        "launch": {
+          "version": "0.1.0",
+          "configurations": [
+            {
+              "name": "Flask (debug)",
+              "type": "debugpy",
+              "request": "launch",
+              "module": "flask",
+              "env": {
+                "FLASK_APP": "app:create_app",
+                "FLASK_DEBUG": "1"
+              },
+              "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+              ],
+              "jinja": true,
+              "justMyCode": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

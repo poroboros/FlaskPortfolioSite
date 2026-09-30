@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Neil's Site{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/core.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/terminal.css') }}">
+</head>
+<body>
+  <div id="terminal">
+  <nav class="window-line" data-path="{{ request.path }}">
+    <a></a>
+  </nav>
+  <nav class="prompt-line" data-path="{{ request.path }}">
+    <a href="{{ url_for('main.index') }}">Home</a>
+  </nav>
+  <main>
+    
+    {% block terminal %}{% endblock %}
+  </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+:root {
+  /* Edit these tokens first to make the terminal theme your own. */
+  color-scheme: light;
+  --ink: #352b48;
+  --dark-purple:rgba(53, 43, 72, 0.16);
+  --muted: #756987;
+  --purple: #7759a8;
+  --lavender: #e6def5;
+  --lavender-light: #f2edfb;
+  --paper: #fcfaff;
+  --line: #d8cee9;
+  --green: #638e78;
+  --dark-green: #375545;
+  --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 44px 24px 80px;
+  color: var(--ink);
+  background-color: var(--lavender-light);
+  background-image: linear-gradient(rgba(119, 89, 168, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(119, 89, 168, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.75;
+}
