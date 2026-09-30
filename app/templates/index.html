@@ -4,11 +4,13 @@
 
 
 {% block terminal %}
+<span class="com">neil@portfolio:~{{ request.path }} $ cat AboutMe.md</span>
 <h1>Neil Loftus</h1>
 
-<section>
-  <h2>About</h2>
+<section class="thin-box-outline">
+  <h3>About</h3>
   <p>I am a computer science student at Marshall University. My research focuses on machine learning, with an emphasis
     on computer vision.</p>
 </section>
+
 {% endblock %}

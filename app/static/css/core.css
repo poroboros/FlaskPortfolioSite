@@ -9,8 +9,8 @@
   --lavender-light: #f2edfb;
   --paper: #fcfaff;
   --line: #d8cee9;
-  --green: #638e78;
-  --dark-green: #375545;
+  --green: #2c6456;
+  --dark-green: #1f2c25;
   --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 }
 
@@ -20,7 +20,7 @@ body {
   padding: 44px 24px 80px;
   color: var(--ink);
   background-color: var(--lavender-light);
-  background-image: linear-gradient(rgba(119, 89, 168, 0.035) 1px, transparent 1px),
+  background-image: linear-gradient(rgba(119, 89, 168, 0.035) 1px, transparent 3px),
     linear-gradient(90deg, rgba(119, 89, 168, 0.035) 1px, transparent 1px);
   background-size: 24px 24px;
   font-family: var(--mono);

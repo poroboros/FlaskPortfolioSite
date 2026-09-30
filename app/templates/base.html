@@ -12,11 +12,13 @@
   <nav class="window-line" data-path="{{ request.path }}">
     <a></a>
   </nav>
-  <nav class="prompt-line" data-path="{{ request.path }}">
-    <a href="{{ url_for('main.index') }}">Home</a>
-  </nav>
   <main>
     
+    <nav class="prompt-line" data-path="{{ request.path }}">
+      <span class="com">neil@portfolio:~{{ request.path }} $ ls -d */</span>
+      <a href="{{ url_for('main.index') }}">Home</a>
+      <a href="{{ url_for('main.index') }}">Home_2</a>
+    </nav>
     {% block terminal %}{% endblock %}
   </main>
   </div>
